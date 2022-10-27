@@ -37,6 +37,7 @@ export type FaceFeature = {
   noseBasePosition?: Point,
   yawAngle?: number,
   rollAngle?: number,
+  nodAngle?: number;
 };
 
 type DetectionOptions = {

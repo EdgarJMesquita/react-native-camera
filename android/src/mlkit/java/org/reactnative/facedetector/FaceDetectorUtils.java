@@ -32,6 +32,7 @@ public class FaceDetectorUtils {
     encodedFace.putInt("faceID", id);
     encodedFace.putDouble("rollAngle", face.getHeadEulerAngleZ());
     encodedFace.putDouble("yawAngle", face.getHeadEulerAngleY());
+    encodedFace.putDouble("nodAngle", face.getHeadEulerAngleX());
 
     // If classification was enabled:
     if (face.getSmilingProbability() != null) {
@@ -122,6 +123,8 @@ public class FaceDetectorUtils {
   public static WritableMap changeAnglesDirection(WritableMap face) {
     face.putDouble("rollAngle", (-face.getDouble("rollAngle") + 360) % 360);
     face.putDouble("yawAngle", (-face.getDouble("yawAngle") + 360) % 360);
+    face.putDouble("nodAngle", (-face.getDouble("nodAngle") + 360) % 360);
+
     return face;
   }
 

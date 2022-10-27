@@ -148,6 +148,10 @@
             CGFloat rotZ = -1 * face.headEulerAngleZ;
             [resultDict setObject:@(rotZ) forKey:@"rollAngle"];
         }
+        if (face.hasHeadEulerAngleX) {
+            CGFloat rotX = face.headEulerAngleX;
+            [resultDict setObject:@(rotX) forKey:@"nodAngle"];
+        }
         
         // If landmark detection was enabled (mouth, ears, eyes, cheeks, and
         // nose available):

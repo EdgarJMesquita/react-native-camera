@@ -403,6 +403,7 @@ export interface Face {
   noseBasePosition?: Point;
   yawAngle?: number;
   rollAngle?: number;
+  nodAngle?: number;
 }
 
 export interface TrackedTextFeatureRecursive {
