@@ -24,7 +24,7 @@ public class RNFaceDetector {
 
   private int mClassificationType = NO_CLASSIFICATIONS;
   private int mLandmarkType = NO_LANDMARKS;
-  private float mMinFaceSize = 0.15f;
+  private float mMinFaceSize = 0.05f;
   private int mMode = FAST_MODE;
 
   public RNFaceDetector(Context context) {
