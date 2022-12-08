@@ -517,7 +517,7 @@ interface DetectionOptions {
 export class FaceDetector {
   private constructor();
   static Constants: Constants['FaceDetection'];
-  static detectFacesAsync(uri: string, options?: DetectionOptions): Promise<Face[]>;
+  static detectFacesAsync(uri: string, options?: DetectionOptions): Promise<{ faces: Face[] }>;
 }
 
 // -- DEPRECATED CONTENT BELOW
