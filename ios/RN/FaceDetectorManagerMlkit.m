@@ -19,7 +19,7 @@
     self.options.performanceMode = MLKFaceDetectorPerformanceModeFast;
     self.options.landmarkMode = MLKFaceDetectorLandmarkModeNone;
     self.options.classificationMode = MLKFaceDetectorClassificationModeNone;
-    
+    self.options.minFaceSize = 0.05;
     self.faceRecognizer = [MLKFaceDetector faceDetectorWithOptions:_options];
   }
   return self;
