@@ -1,9 +1,15 @@
 #import "TextDetectorManager.h"
 #if __has_include(<MLKitTextRecognition/MLKitTextRecognition.h>)
 @import MLKitVision;
+@import MLKitTextRecognitionCommon.MLKText;
+@import MLKitTextRecognitionCommon.MLKTextBlock;
+@import MLKitTextRecognitionCommon.MLKTextElement;
+@import MLKitTextRecognitionCommon.MLKTextLine;
 
 @interface TextDetectorManager ()
 @property(nonatomic, strong) MLKTextRecognizer *textRecognizer;
+// Still testing
+@property(nonatomic, strong) MLKTextRecognizerOptions *options;
 @property(nonatomic, assign) float scaleX;
 @property(nonatomic, assign) float scaleY;
 @end
@@ -13,7 +19,10 @@
 - (instancetype)init
 {
   if (self = [super init]) {
-    self.textRecognizer = [MLKTextRecognizer textRecognizer];
+    //  self.textRecognizer = [MLKTextRecognizer textRecognizer];
+    // ------ or -------
+    self.options = [[MLKTextRecognizerOptions alloc] init];
+    self.textRecognizer = [MLKTextRecognizer textRecognizerWithOptions:self.options];
   }
   return self;
 }
